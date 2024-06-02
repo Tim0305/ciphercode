@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciphercode</title>
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=REM:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <img src="images/logo.png" alt="logotipo" class="img-header">
+            <h1 class="texto">Ciphercode</h1>
+        </header>
+    
+        <main>
+            <div class="entradas">
+                <h2 class="texto">Ingrese el texto</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="mensaje" class="texto">Texto</label>
+                        <textarea id="mensaje" cols="70" rows="10" class="textoMuestra"></textarea>
+                        <button type="button" class="copiar" onclick="copyText('mensaje')">Copiar Texto</button>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="mensaje-encriptado" class="texto">Texto Encriptado</label>
+                        <textarea id="mensaje-encriptado" cols="70" rows="10" class="textoMuestra"></textarea>
+                        <button type="button" class="copiar" onclick="copyText('mensaje-encriptado')">Copiar Texto Encriptado</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+        
+        <div id="alert" class="alert hidden">Esta es una alerta</div>
+        
+        <footer>
+            <p class="copyright">Timoteo Aguilar - 2024</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

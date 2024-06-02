@@ -1,0 +1,157 @@
+body {
+    font-family: 'REM', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Esta clase agrupa todo el body. Creamos un grid de 3 filas, header, main y footer. Asignamos el footer hasta el final de la pagina */
+.wrapper {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #3498DB;
+    padding: 100px;
+    display: flex;
+    align-items: center;  /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    position: relative; /* Para posicionar el logo */
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 70px;
+    color: white;
+    margin: 0;
+    position: absolute; /* Posiciona el texto en el centro */
+    left: 50%; /* Mueve el centro del texto al centro del header */
+    transform: translateX(-50%); /* Ajusta la posición para centrar el texto */
+    text-align: center; /* Centra el texto dentro del elemento h1 */
+}
+
+.img-header {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+    position: absolute; /* Posiciona la imagen en la izquierda */
+    left: 30px; /* Ajusta la distancia desde la izquierda */
+}
+
+
+
+h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    padding: 20px;
+    text-align: center; /* Centra el texto del subheader */
+}
+
+.entradas {
+    margin: 40px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos horizontalmente */
+}
+
+.form-group {
+    margin: 20px;
+    display: inline-block;
+}
+
+.form-group label {
+    display: block;
+    margin: 10px 0;
+    font-size: 25px;    
+    text-align: center;
+}
+
+.textoMuestra {
+    font-weight: 300;
+    font-size: 15px;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    resize: none; /* Bloquea la opción de redimensionar */
+    padding: 10px;
+}
+
+.enviar {
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; /* Centra el texto dentro del botón */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498DB;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Añade transición para transformaciones */
+}
+
+.enviar:hover{
+    background-color: #2980B9;
+    transform: scale(1.2);
+}
+
+.copiar {
+    font-family: 'REM', sans-serif;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #3498DB;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 10px 0;
+    font-size: 20px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.copiar:hover {
+    background-color: #2980B9;
+}
+
+.alert {
+    position: fixed;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    display: none;
+}
+
+.alert.hidden {
+    display: none;
+}
+
+.alert.visible {
+    display: block;
+}
+
+footer {
+    background-color: #34495E; /* Color de fondo del footer */
+    padding: 50px;
+    text-align: center; /* Centra el texto de copyright */
+    bottom: 0;
+}
+
+.copyright {
+    font-size: 20px;
+    color: white; /* Color del texto de copyright */
+}
